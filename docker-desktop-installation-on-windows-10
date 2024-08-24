@@ -1,0 +1,14 @@
+Steps:
+1. make sure that you have chocolaty installed on your windows-10 machine
+2. open a powershell(admin)
+3. choco install docker-desktop // this will install a docker-desktop instance on your machine.
+4. in order to setup and run the docker-desktop, you need to enable certain linux features on windows machine
+  ( this link gives detailed information https://contabo.com/blog/how-to-install-wsl2-on-windows-10/)
+  enable WSL (Windows SubSystems for Linux) -run the bellow commands in powershell terminal 
+   i. dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+      (if everything goes well you should see a successful 'feature enabled' message on the terminal
+   ii. (Enabling Virtual Machine Platform and WSL 2 on Windows) run
+       dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+5. in order the setup in 4 to work, restart your machine
+6. run this command: wsl --set-default-version 2
+7. then enjoy your docker-desktop instance
